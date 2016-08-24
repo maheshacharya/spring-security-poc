@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="woonsan">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hipposys:user</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:active" sv:type="Boolean">
+    <sv:value>true</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:email" sv:type="String">
+    <sv:value>wko@onehippo.com</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:firstname" sv:type="String">
+    <sv:value>W</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:lastname" sv:type="String">
+    <sv:value>KO</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:password" sv:type="String">
+    <sv:value>$SHA-256$ix04wULiEyk=$DGgKRkmi/eeXRoR7HH5Xtd7dx4FaZsFyCAw2iU7Odko=</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:passwordlastmodified" sv:type="Date">
+    <sv:value>2016-08-24T14:06:46.592-04:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:securityprovider" sv:type="String">
+    <sv:value>internal</sv:value>
+  </sv:property>
+</sv:node>
