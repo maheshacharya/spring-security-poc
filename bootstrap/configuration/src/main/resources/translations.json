@@ -1,0 +1,98 @@
+{
+  "hippo:templates":   {
+    "en":     {
+      "new-banner-folder": "new banner folder",
+      "new-banner-document": "new banner document",
+      "new-content-folder": "new content folder",
+      "new-content-document": "new content document",
+      "new-resource-bundle": "new resource bundle",
+      "new-untranslated-folder": "new untranslated folder"
+    },
+    "nl":     {
+      "new-banner-folder": "nieuwe banner map",
+      "new-banner-document": "nieuwe banner",
+      "new-content-folder": "nieuwe contentmap",
+      "new-content-document": "nieuw content document",
+      "new-resource-bundle": "nieuwe resource bundle",
+      "new-untranslated-folder": "nieuwe onvertaalde map"
+    },
+    "de":     {
+      "new-banner-folder": "Neuer Banner-Ordner",
+      "new-banner-document": "Neues Banner",
+      "new-content-folder": "Neuer Content-Ordner",
+      "new-content-document": "Neues Content-Document",
+      "new-resource-bundle": "Neues Resource-Bundle",
+      "new-untranslated-folder": "Neuer nicht übersetzter Ordner"
+    },
+    "fr":     {
+      "new-banner-folder": "nouveau dossier bannière",
+      "new-banner-document": "nouvelle bannière",
+      "new-content-folder": "nouveau dossier contenu",
+      "new-content-document": "nouveau document contenu",
+      "new-resource-bundle": "nouveau resource bundle",
+      "new-untranslated-folder": "nouveau dossier non traduit"
+    }
+  },
+  "hippo:types":   {
+    "myhippoproject:bannerdocument":     {
+      "en":       {
+        "myhippoproject:content": "Content",
+        "myhippoproject:title": "Title",
+        "jcr:name": "Banner",
+        "myhippoproject:link": "Link",
+        "myhippoproject:image": "Image"
+      },
+      "nl":       {
+        "myhippoproject:content": "Inhoud",
+        "myhippoproject:title": "Titel",
+        "jcr:name": "Banner",
+        "myhippoproject:link": "Link",
+        "myhippoproject:image": "Afbeelding"
+      },
+      "fr":       {
+        "myhippoproject:content": "Contenu",
+        "myhippoproject:title": "Titre",
+        "jcr:name": "Bannière",
+        "myhippoproject:link": "Lien",
+        "myhippoproject:image": "Image"
+      },
+      "de":       {
+        "myhippoproject:content": "Inhalt",
+        "myhippoproject:title": "Titel",
+        "jcr:name": "Banner",
+        "myhippoproject:link": "Link",
+        "myhippoproject:image": "Abbildung"
+      }
+    },
+    "myhippoproject:contentdocument":     {
+      "en":       {
+        "myhippoproject:content": "Content",
+        "myhippoproject:title": "Title",
+        "jcr:name": "Simple Document",
+        "myhippoproject:publicationdate": "Publication date",
+        "myhippoproject:introduction": "Introduction"
+      },
+      "nl":       {
+        "myhippoproject:content": "Inhoud",
+        "myhippoproject:title": "Titel",
+        "jcr:name": "Eenvoudig Document",
+        "myhippoproject:publicationdate": "Publicatiedatum",
+        "myhippoproject:introduction": "Introductie"
+      },
+      "fr":       {
+        "myhippoproject:content": "Contenu",
+        "myhippoproject:title": "Titre",
+        "jcr:name": "Document simple",
+        "myhippoproject:publicationdate": "Date de publication",
+        "myhippoproject:introduction": "Introduction"
+      },
+      "de":       {
+        "myhippoproject:content": "Inhalt",
+        "myhippoproject:title": "Titel",
+        "jcr:name": "Einfaches Dokument",
+        "myhippoproject:publicationdate": "Publikationsdatum",
+        "myhippoproject:introduction": "Einführung"
+      }
+    }
+  }
+}
