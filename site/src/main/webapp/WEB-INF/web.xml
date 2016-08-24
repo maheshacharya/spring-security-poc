@@ -37,6 +37,12 @@
     <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
     <param-value>messages</param-value>
   </context-param>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>
+      /WEB-INF/security.xml
+    </param-value>
+  </context-param>
   <!--
     HST-2 Content Beans Annotation Configuration. You can configure it
     with either xml or classes location filter. For example, if the
@@ -85,6 +91,18 @@
     <filter-class>org.hippoecm.hst.container.HstFilter</filter-class>
   </filter>
 
+  <filter>
+    <filter-name>springSecurityFilterChain</filter-name>
+    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>springSecurityFilterChain</filter-name>
+    <url-pattern>/*</url-pattern>
+
+    <dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
+
   <filter-mapping>
     <filter-name>CharacterEncodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
@@ -108,6 +126,10 @@
   <!-- Listener that dispatches http session events to ComponentManager. -->
   <listener>
     <listener-class>org.hippoecm.hst.site.container.session.HttpSessionEventPublisher</listener-class>
+  </listener>
+
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
 
   <servlet>

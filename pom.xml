@@ -75,7 +75,8 @@
     <repo.bootstrap>true</repo.bootstrap>
 
     <hippo.cms.locales>nl,de,fr,zh</hippo.cms.locales>
-
+    <spring.security.version>4.0.2.RELEASE</spring.security.version>
+    <hst-springsec.version>1.1.0</hst-springsec.version>
   </properties>
 
   <repositories>
@@ -88,6 +89,12 @@
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>org.onehippo.cms7.hst.dependencies</groupId>
+        <artifactId>hst-spring-dependencies</artifactId>
+        <type>pom</type>
+        <version>${hippo.hst.version}</version>
+      </dependency>
       <dependency>
         <groupId>org.onehippo.cms7</groupId>
         <artifactId>hippo-essentials-plugin-sdk-api</artifactId>
@@ -158,6 +165,34 @@
         <artifactId>easymock</artifactId>
         <version>${easymock.version}</version>
         <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-core</artifactId>
+        <version>${spring.security.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-web</artifactId>
+        <version>${spring.security.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-config</artifactId>
+        <version>${spring.security.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-taglibs</artifactId>
+        <version>${spring.security.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.onehippo.forge.hst-springsec</groupId>
+        <artifactId>hst-springsec</artifactId>
+        <version>${hst-springsec.version}</version>
       </dependency>
 
     </dependencies>

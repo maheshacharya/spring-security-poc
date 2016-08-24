@@ -1,0 +1,49 @@
+<beans xmlns:security="http://www.springframework.org/schema/security"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <!-- These are some patterns of uri that must be let through the security filters so that CMS side requests work well.-->
+    <security:http pattern="/_rp/**" security="none"/>
+    <security:http pattern="/_cmsrest/**" security="none"/>
+    <security:http pattern="/_cmsinternal/**" security="none"/>
+    <security:http pattern="/search/**" security="none"/>
+    <security:http pattern="/logout*" security="none"/>
+
+
+    <security:http auto-config="true" use-expressions="true" disable-url-rewriting="false">
+
+
+        <!-- Login/Logout -->
+        <!-- user login is site mapped to login.ftl-->
+        <security:logout logout-url="/logout"
+                         logout-success-url="/userlogin"
+                         invalidate-session="true"
+                         delete-cookies="JSESSIONID"/>
+
+        <security:form-login
+                login-page="/userlogin"
+                authentication-success-handler-ref="userAuthenticationSuccessHandler"
+                default-target-url="/"
+                authentication-failure-url="/userlogin?error"/>
+
+
+
+    </security:http>
+
+    <security:authentication-manager>
+        <security:authentication-provider ref="hippoAuthenticationProvider"/>
+    </security:authentication-manager>
+
+    <bean id="hippoAuthenticationProvider"
+          class="org.onehippo.forge.security.support.springsecurity.authentication.HippoAuthenticationProvider">
+    </bean>
+
+
+    <!-- Custom User authentication success handler -->
+    <bean id="userAuthenticationSuccessHandler"
+          class="org.example.security.UserAuthenticationSuccessHandler"/>
+
+
+</beans>
