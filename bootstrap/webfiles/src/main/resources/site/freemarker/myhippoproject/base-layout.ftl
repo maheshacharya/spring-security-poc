@@ -1,5 +1,6 @@
 <!doctype html>
 <#include "../include/imports.ftl">
+<#assign  security=JspTaglibs["http://www.springframework.org/security/tags"] />
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -11,6 +12,12 @@
 <@hst.headContributions categoryExcludes="htmlBodyEnd, scripts" xhtml=true/>
 </head>
 <body>
+<#if Session.SPRING_SECURITY_CONTEXT??>
+    <#assign user=Session.SPRING_SECURITY_CONTEXT.authentication.name/>
+</#if>
+<#if user??>
+<a href="<@hst.link path="/logout"/>" style="padding:10px">Logout ${user} </a>
+</#if>
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
