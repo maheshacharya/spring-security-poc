@@ -116,6 +116,8 @@
   <filter-mapping>
     <filter-name>HstFilter</filter-name>
     <url-pattern>/*</url-pattern>
+    <dispatcher>FORWARD</dispatcher>
+    <dispatcher>REQUEST</dispatcher>
   </filter-mapping>
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
