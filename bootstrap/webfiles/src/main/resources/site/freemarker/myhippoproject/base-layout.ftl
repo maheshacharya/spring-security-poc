@@ -15,8 +15,12 @@
 <#if Session.SPRING_SECURITY_CONTEXT??>
     <#assign user=Session.SPRING_SECURITY_CONTEXT.authentication.name/>
 </#if>
+<div></div>
 <#if user??>
+
 <a href="<@hst.link path="/logout"/>" style="padding:10px">Logout ${user} </a>
+<#else>
+<a href="<@hst.link path="/userlogin"/>" style="padding:10px">Login </a>
 </#if>
 <div class="container">
     <div class="row">
