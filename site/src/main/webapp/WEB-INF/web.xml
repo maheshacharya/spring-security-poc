@@ -99,7 +99,7 @@
   <filter-mapping>
     <filter-name>springSecurityFilterChain</filter-name>
     <url-pattern>/*</url-pattern>
-
+    <dispatcher>FORWARD</dispatcher>
     <dispatcher>REQUEST</dispatcher>
   </filter-mapping>
 
@@ -117,7 +117,9 @@
     <filter-name>HstFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
-
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
   <!-- HstContextLoaderListener configuring/initializing/destroying HST Container -->
   <listener>
     <listener-class>org.hippoecm.hst.site.container.HstContextLoaderListener</listener-class>
@@ -128,9 +130,7 @@
     <listener-class>org.hippoecm.hst.site.container.session.HttpSessionEventPublisher</listener-class>
   </listener>
 
-  <listener>
-    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  </listener>
+
 
   <servlet>
     <servlet-name>BinariesServlet</servlet-name>
